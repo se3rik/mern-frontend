@@ -7,21 +7,21 @@ import App from "./App";
 import store from "./redux/store";
 
 import CssBaseline from "@mui/material/CssBaseline";
-import { ThemeProvider } from "@mui/material";
-import { theme } from "./theme";
+// import { ThemeProvider } from "@mui/material";
+// import { theme } from "./theme";
 import "./index.scss";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
 root.render(
-  <React.StrictMode>
+  <>
     <CssBaseline />
-    <ThemeProvider theme={theme}>
-      <BrowserRouter>
-        <Provider store={store}>
-          <App />
-        </Provider>
-      </BrowserRouter>
-    </ThemeProvider>
-  </React.StrictMode>
+    {/* <ThemeProvider theme={theme}> */}
+    <BrowserRouter>
+      <Provider store={store}>
+        <App />
+      </Provider>
+    </BrowserRouter>
+    {/* </ThemeProvider> */}
+  </>
 );
